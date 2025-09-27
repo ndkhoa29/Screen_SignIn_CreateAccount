@@ -11,15 +11,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Login_Activity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
-    private TextView tvRegister;
+    private TextView tvLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -30,15 +30,16 @@ public class Login_Activity extends AppCompatActivity {
     }
 
     private void initViews() {
-        tvRegister = findViewById(R.id.tvRegister);
+        tvLogin = findViewById(R.id.tvLogin);
     }
 
     private void setClickListeners() {
-        tvRegister.setOnClickListener(new View.OnClickListener() {
+        tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login_Activity.this, RegisterActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, Login_Activity.class);
                 startActivity(intent);
+                finish();
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
