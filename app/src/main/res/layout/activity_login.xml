@@ -12,7 +12,7 @@
         android:id="@+id/logoSection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,15 +28,14 @@
             app:cardElevation="0dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:hint="#2196F3"
-                android:src="@drawable/ic_lock" />
+                android:src="@drawable/ic_hello" />
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Welcome Text -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
